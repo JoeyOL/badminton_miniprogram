@@ -197,6 +197,10 @@ Component({
       empytGridsBefore: [],
       //下月格子
       empytGridsAfter: [],
+      // 本月课程列表
+      courses:[],
+      // 选中日期的课程记录
+      selectDayCourse:[],
       //显示日期
       title: '',
       //格式化日期
@@ -252,6 +256,33 @@ Component({
           })
       },
 
+      //获取本月的课程
+      getCourses:function(year,month){
+        //从某个数据库中获得当前用户的课程记录
+        let days = this.getThisMonthDays(year, month),
+            courses=[];
+        for (let i=1;i<=days;i+=7){
+          courses.push({
+            date:i,
+            teacher:"许坤",
+            startTime:"10:30",
+            endTime:'12:15',
+            place:'大学城羽毛球主馆'
+          })
+        }
+        courses.push({
+          date:29,
+          teacher:"许坤",
+          startTime:"10:30",
+          endTime:'12:15',
+          place:'大学城羽毛球主馆'
+        })
+        this.setData({
+          courses
+        })
+        console.log("courses",courses)
+      },
+
       //初始化
       display: function (year, month, date) {
           this.setData({
@@ -260,11 +291,13 @@ Component({
               date,
               title: year + '年' + this.zero(month) + '月'
           })
+          this.getCourses(year,month)
           this.createDays(year, month);
           this.createEmptyGrids(year, month);
 
           //滚动模糊 初始界面
           this.scrollCalendar(year, month, date);
+          
       },
       //默认选中当天 并初始化组件
       today: function () {
@@ -295,15 +328,17 @@ Component({
       //选择 并格式化数据
       select: function (e) {
           let date = e.currentTarget.dataset.date,
-              select = this.data.year + '-' + this.zero(this.data.month) + '-' + this.zero(date);
+              select = this.data.year + '-' + this.zero(this.data.month) + '-' + this.zero(date),
+              thisMonthDays=this.data.thisMonthDays;
           this.setData({
               title: this.data.year + '年' + this.zero(this.data.month) + '月' + this.zero(date) + '日',
               select: select,
               year: this.data.year,
               month: this.data.month,
-              date: date
+              date: date,
+              selectDayCourse:thisMonthDays[date-1].course
           });
-
+          console.log(this.data.selectDayCourse)
           //发送事件监听
           this.triggerEvent('select', select);
 
@@ -330,20 +365,28 @@ Component({
       },
       // 绘制当月天数占的格子
       createDays: function (year, month) {
+          let courses=this.data.courses
           let thisMonthDays = [],
               days = this.getThisMonthDays(year, month);
           for (let i = 1; i <= days; i++) {
+              let todayCourse=[]
+              for (let j=0;j<courses.length;j++){
+                if (courses[j].date==i){
+                  todayCourse.push(courses[j]);
+                }
+              }
               thisMonthDays.push({
                   date: i,
                   dateFormat: this.zero(i),
                   monthFormat: this.zero(month),
-                  week: this.data.weekText[new Date(Date.UTC(year, month - 1, i)).getDay()]
+                  week: this.data.weekText[new Date(Date.UTC(year, month - 1, i)).getDay()],
+                  course:todayCourse
               });
           }
           this.setData({
               thisMonthDays
           })
-          // console.log('thisMonthDays', thisMonthDays)
+          console.log('thisMonthDays', thisMonthDays)
       },
       //获取当月空出的天数
       createEmptyGrids: function (year, month) {
