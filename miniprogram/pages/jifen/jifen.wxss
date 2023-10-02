@@ -1,0 +1,78 @@
+/* pages/jifen/jifen.wxss */
+/* page{
+  background: #f5f5f5;
+} */
+.title-container{
+  display: flex;
+  height: 80rpx;
+  background: rgb(69, 175, 241);
+  line-height: 80rpx;
+}
+.title-container .back{
+  color: white;
+  margin-left: 20rpx;
+}
+.title-container .title{
+  color: white;
+  margin-left: 225rpx;
+}
+
+.totalPoints {
+  margin-top: 20rpx;
+  padding-top: 5rpx;
+  width: 700rpx;
+  margin-left: 25rpx;
+  height: 140rpx;
+  color: white;
+  border-radius: 20rpx;
+  box-shadow:5rpx 5rpx lightgray;
+  background: rgb(231, 53, 21);
+}
+.totalPoints view{
+  margin-top: 5rpx;
+  margin-left: 50rpx;
+  width: 600rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.totalPoints .points{
+  border-bottom: 1rpx solid white;
+}
+.body{
+  width: 700rpx;
+  margin-left: 25rpx;
+  margin-top: 30rpx;
+}
+.body .record{
+  background: rgb(255, 255, 255);
+  width: 650rpx;
+  margin-left: 25rpx;
+  padding-bottom: 1rpx;
+  box-shadow: 5rpx 5rpx lightgray;
+  border-radius: 20rpx;
+}
+.body .title{
+  background: lightseagreen;
+  color:  white;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left: 30rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.body .info{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.body .record .info view{
+  margin-left: 25rpx;
+  margin-top: 5rpx;
+  height: 48rpx;
+  padding-bottom: 5rpx;
+  word-break: break-all;
+  width: 600rpx;
+  line-height: 48rpx;
+  border-bottom:1rpx solid lightgray ;
+}
+.body .record .info .reason{
+  height: auto;
+}

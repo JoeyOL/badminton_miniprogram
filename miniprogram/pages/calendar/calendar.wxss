@@ -1,0 +1,205 @@
+page {
+  
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.calendar {
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+/* 标题 */
+
+.calendar-title {
+  line-height: 70rpx;
+  font-size: 30rpx;
+  text-align: left;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.calendar-title .ctrl {
+  display: inline-block;
+  padding: 0 20rpx;
+  background: #f5f5f5;
+  border-radius: 10rpx;
+}
+
+.calendar-title .item {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 50rpx;
+}
+
+.calendar-title .title {
+  min-width: 300rpx;
+  text-align: center;
+}
+
+.calendar-title .today {
+  float: right;
+  margin-top: 10rpx;
+}
+
+/* 星期 */
+
+.calendar-week {
+  display: flex;
+  text-align: center;
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+  border-top: 1rpx solid #e0e0e0;
+  border-bottom: 1rpx solid #e0e0e0;
+  background: #f5f5f5;
+}
+
+.calendar-week .item {
+  flex: 1;
+}
+
+/* 日期 */
+
+.calendar-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.calendar-container .grid {
+  display: inline-block;
+  width: 14.28571428571429%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+  z-index: 1;
+  border-radius: 10rpx;
+  box-shadow:5rpx 5rpx #d3d0d0;
+}
+
+.calendar-container .grid .self {
+  position: absolute;
+  top: 10rpx;
+  right: 0rpx;
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background: rgb(49, 120, 228);
+  border: 3rpx solid #fff;
+}
+
+.calendar-container .grid .course{
+  position: absolute;
+  bottom: 5rpx;
+  left: 10rpx;
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background: #802828;
+  border: 3rpx solid #fff;
+}
+
+.calendar-container .grid.gray {
+  color: #ccc;
+}
+
+.calendar-container .grid .wrap.select {
+  position: relative;
+  top: 10rpx;
+  left: 20rpx;
+  line-height: 60rpx;
+
+  background: rgb(49, 120, 228);
+  border-radius: 60%;
+  color: #fff;
+  width: 70%;
+  height: 80%;
+}
+
+/* 滚动展示 */
+
+.calendar-x {
+  white-space: nowrap;
+  padding: 20rpx 0;
+  height: 110rpx;
+}
+
+.calendar-x .grid {
+  display: inline-block;
+  line-height: 70rpx;
+  position: relative;
+  z-index: 1;
+  width: 70rpx;
+  
+  text-align: center;
+  background: #f5f5f5;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.calendar-x .grid:last-child{
+  margin-right: 20rpx;
+}
+
+.calendar-x .grid .self {
+  position: absolute;
+  top: 0rpx;
+  right: 0rpx;
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 50%;
+  background: rgb(49, 120, 228);
+  border: 3rpx solid #fff;
+}
+
+.calendar-x .grid.gray {
+  color: #ccc;
+}
+
+.calendar-x .grid .wrap.select {
+  background: rgb(49, 120, 228);
+  border-radius: 10rpx;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.courseRecord{
+  width: 720rpx;
+  margin-top: 20rpx;
+  margin-left: 15rpx;
+  background: #fff;
+  box-shadow: 5rpx 5rpx lightgray;
+  border-radius: 10rpx;
+}
+.courseRecord .title{
+  background-color: lightseagreen;
+  height: 60rpx;
+  color: #fff;
+  font-size: 28rpx;
+  font-weight: 500;
+  line-height: 60rpx;
+  padding-left: 20rpx;
+  border-radius: 10rpx 10rpx 0 0;
+}
+
+.courseRecord .record{
+  width: 680rpx;
+  margin-top: 10rpx;
+  height: 120rpx;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx lightgray solid;
+}
+.courseRecord .empty{
+  width: 680rpx;
+  margin-top: 10rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx lightgray solid;
+}

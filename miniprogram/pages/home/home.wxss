@@ -1,0 +1,86 @@
+/* pages/home/home.wxss */
+page{
+  background: rgb(255, 255, 255);
+}
+.leftup{
+  background:rgb(81, 202, 186);
+  width: 250rpx;
+  height: 250rpx;
+  position: absolute;
+  left: 50rpx;
+  top: 50rpx;
+  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  border-radius: 20rpx;
+}
+
+.rightup{
+  background:rgb(81, 202, 186);
+  width: 250rpx;
+  height: 250rpx;
+  position: absolute;
+  right: 50rpx;
+  top: 50rpx;
+  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  border-radius: 20rpx;
+}
+
+.leftlow{
+  background:rgb(81, 202, 186);
+  width: 250rpx;
+  height: 250rpx;
+  position: absolute;
+  left: 50rpx;
+  bottom: 50rpx;
+  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  border-radius: 20rpx;
+}
+
+.rightlow{
+  background:rgb(81, 202, 186);
+  width: 250rpx;
+  height: 250rpx;
+  position: absolute;
+  right: 50rpx;
+  bottom: 50rpx;
+  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  border-radius: 20rpx;
+}
+.center{
+  margin-top: 57%;
+  background:rgb(81, 202, 186);
+  width: 250rpx;
+  height: 250rpx;
+  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  border-radius: 20rpx;
+}
+
+.icon image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background: white;
+  margin-top: 10rpx;
+}
+.icon{
+  position: relative;
+  bottom: 30rpx;
+  right: 30rpx;
+  box-shadow: 0 0 2rpx 2rpx rgb(173, 173, 173);
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  text-align: center;
+  background: white;
+}
+.mainBody{
+  position: relative;
+  bottom: 20rpx;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  font-size: 40rpx;
+}
+.counter{
+  font-size: 25rpx;
+}
+

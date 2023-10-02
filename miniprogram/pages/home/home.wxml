@@ -1,0 +1,50 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <!-- 左上角 -->
+  <view class="leftup">
+    <view class="icon">
+      <image src="/images/pre_icon_我的积分.png"></image>
+    </view>
+    <view class="mainBody" bindtap="nav">
+      <view>我的积分</view>
+      <view class="counter">总积分: {{totalPoints}}</view>
+    </view>
+  </view>
+
+  <view class="rightup">
+    <view class="icon">
+      <image src="/images/活动中心.png"></image>
+    </view>
+    <view class="mainBody">
+      <view>活动中心</view>
+    </view>
+  </view>
+  
+  <view class="center">
+    <view class="icon">
+      <image src="/images/日期选择_日历组件.png"></image>
+    </view>
+    <view class="mainBody">
+      <view>我的课表</view>
+      <view class="counter">总课时: {{totalTime}}</view>
+    </view>
+  </view>
+
+  <view class="leftlow">
+    <view class="icon">
+      <image src="/images/fitness.png"></image>
+    </view>
+    <view class="mainBody">
+      <view>运动推荐</view>
+    </view>
+  </view>
+
+  <view class="rightlow">
+    <view class="icon">
+      <image src="/images/积分商城.png"></image>
+    </view>
+    <view class="mainBody">
+      <view>积分商城</view>
+    </view>
+  </view>
+</view>

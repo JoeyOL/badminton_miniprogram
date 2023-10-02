@@ -1,0 +1,52 @@
+<!--pages/sportCenter/sportCenter.wxml-->
+
+<!--index.wxml-->
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<!--内容-->
+<!-- <view wx:if="{{currentTab==0}}">
+  <view class='info'>
+    <image src='/img/icon.png'></image>
+    <text>没有已关注</text>
+  </view>
+</view>
+
+<view wx:elif="{{currentTab==1}}">
+  <view class='info'>
+    <image src='/img/icon.png'></image>
+    <text>没有未关注</text>
+  </view>
+</view> -->
+
+<swiper class="swiper" current="{{currentTab}}" duration="100" bindchange="swiperChange">
+  <swiper-item>
+    <view class='discount'>
+      <text>暂无数据</text>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='contest'>
+      <view class="body" wx:for="{{contests}}" wx:key="item">
+        <view class="record">
+          <view class="title">{{item.name}}</view>
+          <view class="info">
+            <view class="time">时间: {{item.time}}</view>
+            <view class="place">地点: {{item.place}}</view>
+            <view class="total">人数/队数: {{item.total}}</view>
+            <view class="left"> 剩余名额: {{item.left}}</view>
+            <view class="form">形式: {{item.form}}</view>
+            <view class="demand">要求: {{item.demand}}</view>
+          </view>
+          <view class="sign" bindtap="checkImg" data-url="{{item.url}}">点击查看报名群二维码</view>
+        </view>
+      </view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='discount'>
+      <text>暂无数据</text>
+    </view>
+  </swiper-item>
+</swiper>

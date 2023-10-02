@@ -1,0 +1,102 @@
+/* pages/sportCenter/sportCenter.wxss */
+/**index.wxss**/
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.navbar{
+  flex: none;
+  font-weight: 600;
+  display: flex;
+  background: #fff;
+  font-size: 30rpx;
+  color: #bbbbbb;
+}
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 90rpx;
+}
+.navbar .item.active{
+  color: lightskyblue;
+}
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rpx;
+  background: lightskyblue;
+}
+.swiper{
+  height: 100%
+}
+.discount{
+  display:flex;
+  margin-top: 250rpx;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+.discount text{
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  color: black;
+}
+
+
+
+.body{
+  width: 700rpx;
+  margin-left: 25rpx;
+  margin-top: 30rpx;
+}
+.body .record{
+  background: rgb(255, 255, 255);
+  width: 650rpx;
+  margin-left: 25rpx;
+  padding-bottom: 1rpx;
+  box-shadow: 5rpx 5rpx lightgray;
+  border-radius: 20rpx;
+}
+.body .title{
+  background: rgb(39, 127, 209);
+  color:  white;
+  height: 80rpx;
+  font-weight: 600;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.body .info{
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+.body .record .info view{
+  margin-left: 25rpx;
+  margin-top: 5rpx;
+  height: 48rpx;
+  padding-bottom: 5rpx;
+  word-break: break-all;
+  width: 600rpx;
+  line-height: 48rpx;
+  border-bottom:1rpx solid lightgray ;
+}
+.body .record .info .demand{
+  height: auto;
+}
+.body .record .sign{
+  height: 60rpx;
+  width: 350rpx;
+  text-align: center;
+  line-height: 60rpx;
+  margin-left: 250rpx;
+  margin-bottom: 10rpx;
+  border-radius: 10rpx;
+  background: lightseagreen;
+  color: white;
+}
