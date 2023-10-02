@@ -9,7 +9,7 @@ page{
   position: absolute;
   left: 50rpx;
   top: 50rpx;
-  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  box-shadow: 2rpx 2rpx rgb(170, 170, 170);
   border-radius: 20rpx;
 }
 
@@ -20,7 +20,7 @@ page{
   position: absolute;
   right: 50rpx;
   top: 50rpx;
-  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  box-shadow: 2rpx 2rpx rgb(170, 170, 170);
   border-radius: 20rpx;
 }
 
@@ -30,8 +30,8 @@ page{
   height: 250rpx;
   position: absolute;
   left: 50rpx;
-  bottom: 50rpx;
-  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  top: 800rpx;
+  box-shadow: 2rpx 2rpx rgb(170, 170, 170);
   border-radius: 20rpx;
 }
 
@@ -41,8 +41,8 @@ page{
   height: 250rpx;
   position: absolute;
   right: 50rpx;
-  bottom: 50rpx;
-  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  top: 800rpx;
+  box-shadow: 2rpx 2rpx rgb(170, 170, 170);
   border-radius: 20rpx;
 }
 .center{
@@ -50,7 +50,7 @@ page{
   background:rgb(81, 202, 186);
   width: 250rpx;
   height: 250rpx;
-  box-shadow: 5rpx 5rpx rgb(170, 170, 170);
+  box-shadow: 2rpx 2rpx rgb(170, 170, 170);
   border-radius: 20rpx;
 }
 

@@ -1,8 +1,8 @@
 <!--pages/jifen/jifen.wxml-->
-<view class="title-container">
+<!-- <view class="title-container">
   <view class="back" >返回</view>
   <view class="title">我的积分</view>
-</view>
+</view> -->
 
 <view class="totalPoints">
  <view class="points">当前总积分: {{totalPoints}}分</view>

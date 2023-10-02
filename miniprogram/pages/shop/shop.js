@@ -1,21 +1,13 @@
-// pages/home/home.js
+// pages/shop/shop.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-     totalPoints:1000,
-     totalTime:200,
+
   },
-  
-  navto:function(e){
-    var path=e.currentTarget.dataset.url
-    console.log(path)
-    wx.navigateTo({
-      url: path
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */
