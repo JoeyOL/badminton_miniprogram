@@ -13,6 +13,20 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "积分页面",
+          "pathName": "pages/jifen/jifen",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "活动中心",
+          "pathName": "pages/sportCenter/sportCenter",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

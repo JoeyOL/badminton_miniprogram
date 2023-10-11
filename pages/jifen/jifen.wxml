@@ -1,0 +1,23 @@
+<!--pages/jifen/jifen.wxml-->
+<view class="title-container">
+  <view class="back" >返回</view>
+  <view class="title">我的积分</view>
+</view>
+
+<view class="totalPoints">
+ <view class="points">当前总积分: {{totalPoints}}分</view>
+ <view class="records">记录数: {{records.length}}条</view>
+</view>
+
+<view class="body" wx:for="{{records}}" wx:key="item">
+   <view class="record">
+      <view class="title">积分记录</view>
+      <view class="info" >
+          <view class="time">时间: {{item.time}}</view>
+          <view class="teacher">教师: {{item.teacher}}</view>
+          <view class="points">积分: {{item.points}}</view>
+          <view class="reason"> 获得积分原因: {{item.reason}}</view>
+      </view>
+   </view>
+</view>
+
